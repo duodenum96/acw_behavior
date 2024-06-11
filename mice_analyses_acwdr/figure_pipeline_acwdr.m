@@ -73,8 +73,8 @@ for i = 1:nmice
     end
     sgtitle(mice{i})
     fontsize(gcf, 13, "points")
-    % saveas(gcf, [pwd, '\figs_acw50\supplementary_topomaps_acwmean\topomap_', mice{i}, '.jpg'])
-    % saveas(gcf, [pwd, '\figs_acw50\supplementary_topomaps_acwmean\topomap_', mice{i}, '.fig'])
+    % saveas(gcf, [pwd, '\figs_acwdr\supplementary_topomaps_acwmean\topomap_', mice{i}, '.jpg'])
+    % saveas(gcf, [pwd, '\figs_acwdr\supplementary_topomaps_acwmean\topomap_', mice{i}, '.fig'])
     exportgraphics(gcf, ...
         [pwd, '\figs_acwdr\supplementary_topomaps_acwmean\topomap_', mice{i}, '.jpg'], ...
         'Resolution', 600)
@@ -229,8 +229,8 @@ else
                 'Horiz','left', 'Vert','bottom', 'Interpreter', 'LaTeX')
 end
 fontsize(gcf, 13, "points")
-% saveas(gcf, 'figs_acw50\restruncorrelation\restrun_var_prcchange_corr.fig')
-% saveas(gcf, 'figs_acw50\restruncorrelation\restrun_var_prcchange_corr.jpg')
+% saveas(gcf, 'figs_acwdr\restruncorrelation\restrun_var_prcchange_corr.fig')
+% saveas(gcf, 'figs_acwdr\restruncorrelation\restrun_var_prcchange_corr.jpg')
 exportgraphics(gcf, 'figs_acwdr\restruncorrelation\restrun_var_prcchange_corr.jpg', ...
     'Resolution',600)
 

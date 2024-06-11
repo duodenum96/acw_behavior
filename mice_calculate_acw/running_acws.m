@@ -40,7 +40,7 @@ function runningBlocks = running_acws(mousename,runningBlocks,acwDIR,dataDIR,del
         ca_acw0 = zeros(nroi, 1);
         
         for i = 1:nroi
-            [ca_acwdr(i), ca_acw0(i), ca_acw50(i)] = acw_f(jrgeco(i,a:b), fs);
+            [ca_acwdr(i), ca_acw0(i), ~] = acw_f(jrgeco(i,a:b), fs);
         end
         
         runningBlocks(run).running_acw.ca_acwdr = ca_acwdr;

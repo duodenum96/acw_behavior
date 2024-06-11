@@ -3,14 +3,16 @@
 % percent change from rest to running
 %% Load stuff
 clear, clc, close all
+addpath('C:\Users\duodenum\Desktop\brain_stuff\misc\hex_and_rgb')
+addpath C:\Users\duodenum\Desktop\brain_stuff\misc\slanCM
 
 cd C:\Users\duodenum\Desktop\brain_stuff\mice_regularacw
-load topo_acwdr.mat
+load topo_acw0.mat
 load('yaxis_info.mat', 'order')
 calculations = load('restvariability_acwdr.mat', "calculations");
 acw_var_x_trials = calculations.calculations.acw_var_x_trials;
 
-load('acwdr_ca.mat', 'sessions');
+load('acw0_ca.mat', 'sessions');
 sessions = string(sessions);
 
 labels = ["onset", "offset", "initial rest", "sustained rest", "running"];
@@ -105,7 +107,7 @@ for i = 1:nmice
     end
 end
 %% Nice topoplots
-labels = {"Rest variability of timescale (\tau)", ["% timescale (\tau) change from", "rest to locomotion"]};
+labels = {"Rest variability of ACW-0 (s)", ["% ACW-0 change from", "rest to locomotion"]};
 close all
 figure(Position= [488 100 560 658]);
 tiledlayout(nmice, n_thingstoplot, "TileSpacing","tight", "Padding", "tight")
@@ -139,9 +141,9 @@ for i = 1:nmice
     end
 end
 fontsize(gcf, 13, "points")
-% saveas(gcf, 'figs_acw50\topomaps_variability_prchange.jpg')
-% saveas(gcf, 'figs_acw50\topomaps_variability_prchange.fig')
-exportgraphics(gcf, 'figs_acwdr\topomaps_variability_prchange.jpg', ...
+% saveas(gcf, 'figs_acwdr\topomaps_variability_prchange.jpg')
+% saveas(gcf, 'figs_acwdr\topomaps_variability_prchange.fig')
+exportgraphics(gcf, 'figs_acw0\topomaps_variability_prchange.jpg', ...
     'Resolution', 600)
 close
 save('restvar_varchange_data.mat')

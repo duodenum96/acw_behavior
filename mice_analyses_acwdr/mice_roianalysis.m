@@ -288,8 +288,6 @@ for j = 1:n_roigroups
     % xtickangle(15)
     
     fontsize(gcf, 16, "points")
-    % saveas(gcf, "figs_acw50\resttaskdiff\mean_x_trl_allmice.jpg")
-    % saveas(gcf, "figs_acw50\resttaskdiff\mean_x_trl_allmice.fig")
     title(names_nice(j))
     pause
     exportgraphics(gcf, ...

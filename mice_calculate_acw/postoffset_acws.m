@@ -61,7 +61,6 @@ function runningBlocks = postoffset_acws(mousename,runningBlocks,acwDIR,dataDIR,
 
         runningBlocks(run).initrest_acw.ca_acwdr = ca_acwdr;
         runningBlocks(run).initrest_acw.ca_acw0 = ca_acw0;
-        runningBlocks(run).initrest_acw.ca_acw50 = ca_acw50;
         
         % now do the sustained rest
         ca_acwdr = zeros(nroi, 1);
